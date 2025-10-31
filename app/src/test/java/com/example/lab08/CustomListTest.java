@@ -53,4 +53,29 @@ public class CustomListTest {
             CustomList.deleteCity(city);
         });
     }
+
+    @Test
+    void testCountCity() {
+        // add mock data
+        CustomList CustomList = mockCustomList();
+        City city2 = new City("Canmore", "Alberta");
+        CustomList.addCity(city2);
+
+        // must count to 1 city + mockCity in CustomList
+        assertEquals(2, CustomList.countCities());
+
+        // must count to 0 city + mockCity after deletion
+        CustomList.deleteCity(city2);
+        assertEquals(1, CustomList.countCities());
+
+        // must count to 2 city + mockCity in CustomList
+        CustomList.addCity(city2);
+        City city3 = new City("Regina", "Saskatchewan");
+        CustomList.addCity(city3);
+        assertEquals(3, CustomList.countCities());
+
+        // must count empty CustomList
+        CustomList CustomListEmpty = new CustomList();
+        assertEquals(0, CustomListEmpty.countCities());
+    }
 }
