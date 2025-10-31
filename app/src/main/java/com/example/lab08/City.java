@@ -1,6 +1,6 @@
 package com.example.lab08;
 
-public class City {
+public class City implements Comparable<City>{
     private String city;
     private String province;
 
@@ -30,5 +30,11 @@ public class City {
     @Override
     public int hashCode() {
         return city.hashCode() + province.hashCode();
+    }
+
+    @Override
+    public int compareTo(City o) {
+        City city = (City) o;
+        return this.city.compareTo(city.getCityName()); // this.city refers to the city name
     }
 }
