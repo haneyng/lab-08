@@ -52,4 +52,5 @@ public class CustomListTest {
         assertThrows(RuntimeException.class, () -> {
             CustomList.deleteCity(city);
         });
+    }
 }
