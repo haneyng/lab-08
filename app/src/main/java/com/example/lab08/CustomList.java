@@ -37,4 +37,7 @@ public class CustomList {
             throw new RuntimeException("Cannot delete a city that doesn't exist.");
         }
     }
+    public int countCities() {
+        return cities.size();
+    }
 }
