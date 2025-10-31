@@ -7,7 +7,7 @@
 
 ## References and Resources
 
-N/A
+References test codes and implement codes from [Lab 6](https://github.com/haneyng/lab-06.git).
 
 ## Verbal Collaboration
 
