@@ -29,4 +29,12 @@ public class CustomList {
         Collections.sort(list);
         return list;
     }
+
+    public void deleteCity(City city) {
+        if (hasCity(city)) {
+            cities.remove(city);
+        } else {
+            throw new RuntimeException("Cannot delete a city that doesn't exist.");
+        }
+    }
 }
